@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
   * main -this program will printthe size of the character
   * Return: return 0
 */
+
 int main(void)
 {
 	char a;
