@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <dtdio.h>
+#include <stdio.h>
 /**
  * main - This program will run with if else program
  * Return: return 0
