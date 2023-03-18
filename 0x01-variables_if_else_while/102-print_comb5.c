@@ -17,8 +17,10 @@ int main(void)
 		{
 			for (q = 0; q < 10; q++)
 			{
-				for (s = 1; s < 10; s++)
+				for (s = 0; s < 10; s++)
 				{
+				if (i == 0 && j == 0 && q == 0 && s == 0)
+					continue;
 					putchar('0' + i);
 					putchar('0' + j);
 					putchar(' ');
@@ -33,3 +35,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
