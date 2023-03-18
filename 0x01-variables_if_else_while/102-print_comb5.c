@@ -11,27 +11,21 @@ int main(void)
 	int q;
 	int s;
 
-for (i = 0; i < 10; i++)
-{
-	for (j = 0; j < 10 ; j++)
+	for (i = 0; i <= 98; i++)
 	{
-		for (q = 0; q < 10; q++)
+		for (j = i + 1; j <= 99; j++)
 		{
-			for (s = 0; s < 10; s++)
-			{
-				if (i == 0 && j == 0 && q == 0 && s == 0)
-					continue;
-				putchar('0' + i);
-				putchar('0' + j);
-				putchar(' ');
-				putchar('0' + q);
-				putchar('0' + s);
-				putchar(',');
-				putchar(' ');
-			}
+			putchar('0' + (i / 10));
+			putchar('0' + (i % 10));
+			putchar(' ');
+			putchar('0' + (j / 10));
+			putchar('0' + (j % 10));
+			if (i == 98 && j == 99)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
-}
 	putchar('\n');
 	return (0);
 }
