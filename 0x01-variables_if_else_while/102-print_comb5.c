@@ -17,7 +17,7 @@ int main(void)
 		{
 			for (q = 0; q < 10; q++)
 			{
-				for (s = 0; s < 10; s++)
+				for (s = 1; s < 10; s++)
 				{
 					putchar('0' + i);
 					putchar('0' + j);
