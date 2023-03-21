@@ -9,10 +9,10 @@ void print_times_table(int n)
 	int i;
 	int j;
 
-	if  (n >= 0 && n <= 15)
+	if (n == 0)
+		printf("%d", n);
+	else if  (n > 0 && n <= 15)
 	{
-		if (n == 0)
-			printf("%d", 0);
 		for (i = 0; i <= n; i++)
 		{
 			for (j = 0; j <= n; j++)
