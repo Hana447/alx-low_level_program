@@ -1,5 +1,10 @@
-#include <stdio.h>
+#include "main.h"
 /**
-  * main - this will return another function
-  * Return: return 0
-  * 
+  * _islower - this file will 1 if it is positive and 0 if it is negative
+  *  Return: return
+  * @c: -is a parametr
+  */
+int _islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}
