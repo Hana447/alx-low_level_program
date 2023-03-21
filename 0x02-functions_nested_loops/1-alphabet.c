@@ -1,18 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 /**
   * main - This will print the alphabet
   * Return: return 0
   */
-int main(void)
+void  print_alphabet(void)
 {
 	char a = 'a';
 
 	while (a <= 'z')
 	{
-		putchar(a);
+		_putchar(a);
 		a++;
 	}
-	printf("\n");
-	return (0);
-
+	_putchar('\n');
 }
