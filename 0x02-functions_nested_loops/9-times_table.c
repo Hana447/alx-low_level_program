@@ -1,21 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 /**
   * times_table - this function return time table
   *
   */
 void times_table(void)
 {
-	int i;
-	int j;
+	int i = 0;
+	int j = 0;
 
-	for (i = 0; i < 10; i++)
+	while (i < 10)
 	{
-		for (j = 0; j < 10; j++)
+		j = 0;
+		while (j < 10)
 		{
-			_putchar(i * j + '0');
-			_putchar(',');
-			_putchar(' ');
+			int n = i * j;
+			if (n < 10)
+			printf("%d,  ", n);
+			printf("%d, ", n);
+			j++;
 		}
-		_putchar('\n');
+		printf("\n");
+		i++;
 	}
+	printf("\n");
 }
