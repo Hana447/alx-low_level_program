@@ -5,17 +5,13 @@
   */
 int main(void)
 {
-	int num1 = 5;
-	int num2 = 3;
 	int i;
 	int sum = 0;
 
 	for (i = 3; i < 1024; i++)
 	{
-		int sum1 = num1 * i;
-		int sum2 = num2 * i;
-
-		sum = sum1 + sum2;
+		if ((i % 3 == 0) || (i % 5))
+		sum = sum + i
 	}
 	printf("%d\n", sum);
 	return (0);
