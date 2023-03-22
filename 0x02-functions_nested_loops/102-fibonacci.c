@@ -14,7 +14,7 @@ int main(void)
 	printf("%ld, ", num2);
 
 	for (i = 3; i <= 50; i++)
-	{	
+	{
 		if (i < 50)
 			printf("%ld, ", sum);
 		else
