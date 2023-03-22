@@ -5,20 +5,41 @@
   */
 int main(void)
 {
-	int i;
-	int num1 = 1;
-	int num2 = 2;
-	int sum = num1 + num2;
+	unsigned long int i;
+	unsigned long int j;
+	unsigned long int j1;
+	unsigned long int j2;
+	unsigned long int k;
+	unsigned long int k1;
+	unsigned long int k2;
 
-	printf("%d, ", num1);
-	printf("%d, ", num2);
-	for (i = 3; i < 98; i++)
+	j = 1;
+	k = 2;
+	printf("%lu", j);
+
+	for (i = 1; i < 91; i++)
 	{
-		printf("%d, ", sum);
-		num1 = num2;
-		num2 = sum;
-		sum = num1 + num2;
-		printf("\n");
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
 	}
+
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", k1 + (k2 / 1000000000));
+		printf(", %lu", k2 % 1000000000);
+		k1 = k1 + j1;
+		j1 = k1 - j1;
+		k2 = k2 + j2;
+		j2 = k2 - j2;
+	}
+
+	printf("\n");
+
 	return (0);
 }
