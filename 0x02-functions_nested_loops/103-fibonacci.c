@@ -7,32 +7,23 @@
 
 int main(void)
 {
-	int j;
-	int k;
-	int h;
-
-	int num2 = 2;
-	int num1;
-	int sum = 0;
 	int i;
-	int total = 0;
-	
-	sum = sum + num2;
-	for (i = 4; i < 50; i++)
-	{
-		
-		if (sum > 4000000)
-			break;
-		else if (sum % 2 == 0)
-		{
-			num1 = num2;
-			num2 = sum;
-			sum = num1 + num2;
-		}
-			total = total + sum;
-		
+	long int num1 = 1;
+	long int num2 = 2;
+	long int sum = 0;
+	long int next;
 
+	for (i = 3; i <= 50; i++)
+	{
+		if (num1 < 4000000 && (num1 % 2) == 0)
+		{
+			sum = sum + num1;
+		}
+		next = num1 + num2;
+		num1 = num2;
+		num2 = next;
 	}
-	printf("%d\n", total);
+	printf("%ld\n", sum);
+
 	return (0);
 }
