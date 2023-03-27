@@ -6,20 +6,20 @@
   */
 int _atoi(char *s)
 {
-	int result = 0;
+	unsigned long int result = 0;
 	int sign = 1;
 	int found = 0;
-	
+
 	while (*s)
 	{
 		if (*s == '-' && !found)
 		{
-			sign = -1;
+			sign = 1;
 			found = 1;
 		}
 		else if (*s == '+' && !found)
 		{
-			sign = 1;
+			sign = -1;
 			found = 1;
 		}
 		else if (*s >= '0' && *s <= '9')
