@@ -8,20 +8,27 @@ int _atoi(char *s)
 {
 	int result = 0;
 	int sign = 1;
-
+	int found = 0;
 	
-	if (*s == ' ' || *s == '-' || *s == '+')
+	while (*s)
 	{
-		if (*s == '-')
+		if (*s == '-' && !found)
 		{
 			sign = -1;
+			found = 1;
+		}
+		else if (*s == '+' && !found)
+		{
+			sign = 1;
+			found = 1;
+		}
+		else if (*s >= '0' && *s <= '9')
+		{
+			result = result * 10 + (*s - '0');
+			found = 1;
 		}
 		s++;
-	}
-	while (*s >= '0' && *s <= '9')
-	{
-		result = result * 10 + (*s - '0');
-		s++;
+
 	}
 	return (result * sign);
 }
