@@ -6,7 +6,7 @@
   */
 int _atoi(char *s)
 {
-	float result = 0;
+	unsigned int result = 0;
 	int sign = 1;
 	int found = 0;
 	int min = 0;
