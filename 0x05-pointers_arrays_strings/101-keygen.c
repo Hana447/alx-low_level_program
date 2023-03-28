@@ -7,21 +7,25 @@
   */
 #define PASSWORD_LENGTH 10
 int main(void)
-{
-	int i;
-	char password[PASSWORD_LENGTH + 1];
-char charset[80] =
-"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!£$%^&*()_+{}:@";
-const int charset_size = sizeof(charset) - 1;
+{	
+	int password[100];
+	int i, sum, n;
 
-srand(time(NULL));
+	sum = 0;
+	srand(time(NULL));
 
-for (i = 0; i < PASSWORD_LENGTH; i++)
-{
-	password[i] = charset[rand() % charset_size];
-}
-password[PASSWORD_LENGTH] = '\0';
-
-printf("%s\n", password);
+	for (i = 0; i < 100; i++)
+	{
+		password[i] = rand() % 78;
+		sum += (password[i] + '0');
+		putchar(password[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
 return (0);
 }
