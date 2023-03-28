@@ -8,13 +8,15 @@
 #define PASSWORD_LENGTH 10
 int main(void)
 {
-char password[PASSWORD_LENGTH + 1];
+	int i;
+	char password[PASSWORD_LENGTH + 1];
 char charset[80] =
 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!£$%^&*()_+{}:@";
 const int charset_size = sizeof(charset) - 1;
+
 srand(time(NULL));
 
-for (int i = 0; i < PASSWORD_LENGTH; i++)
+for (i = 0; i < PASSWORD_LENGTH; i++)
 {
 	password[i] = charset[rand() % charset_size];
 }
