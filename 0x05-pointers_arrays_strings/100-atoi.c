@@ -34,7 +34,6 @@ int _atoi(char *s)
 		}
 		else if (!(*s >= '0' && *s <= '9') && found == 2)
 			break;
-		
 		s++;
 
 	}
