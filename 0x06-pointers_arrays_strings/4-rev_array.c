@@ -6,14 +6,17 @@
   */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int temp;
+	int *ptr = a;
+	int *ptr1 = a + (n - 1);
 
-	for (i = n - 1; i >= 0; i--)
+	temp = 0;
+	while (ptr <= ptr1)
 	{
-		if (i != 0)
-			printf("%d, ", a[i]);
-		else
-			printf("%d", a[i]);
+		temp = *ptr;
+		*ptr = *ptr1;
+		*ptr1 = temp;
+		ptr++;
+		ptr1--;
 	}
-	printf("\n");
 }
