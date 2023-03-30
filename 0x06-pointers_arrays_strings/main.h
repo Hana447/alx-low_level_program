@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+char *leet(char *);
 char *cap_string(char *);
 int _putchar(char c);
 char *string_toupper(char *);
