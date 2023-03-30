@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+char *cap_string(char *);
 int _putchar(char c);
 char *string_toupper(char *);
 void reverse_array(int *a, int n);
