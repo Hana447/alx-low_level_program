@@ -12,17 +12,16 @@ char *rot13(char *n)
 	char str2[] =
 		"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; n[i] != '\0'; i++)
+for (i = 0; n[i] != '\0'; i++)
+{
+	for (j = 0; j < 52; j++)
+	{
+		if (n[i] == str[j])
 		{
-			for (j = 0; j < 52; j++)
-			{
-				if (n[i] == str[j])
-				{
-					n[i] = str2[j];
-					break;
-					
-				}
+			n[i] = str2[j];
+			break;
 			}
 		}
-		return (n);
+}
+	return (n);
 }
