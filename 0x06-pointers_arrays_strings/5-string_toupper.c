@@ -3,18 +3,20 @@
 /**
   * string_toupper -This function change the letter to uppercase
   * @c: param
+  * Return: return char
   */
 char *string_toupper(char *c)
-{	
-	char *ptr = c;
-	int i;
+{
 
-	for (i = 0; *ptr; i++)
+	while (*c)
 	{
-		if (!isupper(ptr[i]))
-			toupper(ptr[i]);
-		ptr++;
+		if (*c >= 'a' && *c <= 'z')
+		{
+			*c = *c - 32;
+		}
+		c++;
 	}
-	*ptr = '\0';
+	*c = '\0';
+
 	return (c);
 }
