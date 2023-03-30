@@ -11,17 +11,15 @@ char *leet(char *str)
 	char a1[] = "aAeEoOtTlL";
 	char a2[] = "4433007711";
 
-	for (i = 0; *ptr; i++)
+	for (i = 0; ptr[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (*ptr == a1[j])
+			if (ptr[i] == a1[j])
 			{
-				*ptr = a2[j];
-				ptr++;
+				ptr[i] = a2[j];
 			}
 		}
-		ptr++;
 	}
 	return (str);
 }
