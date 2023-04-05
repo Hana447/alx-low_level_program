@@ -6,26 +6,36 @@
   */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_helper(n, 0, n));
+	if (n < 0)
+		return (-1);
+	return (_sqrt(n,2));
 }
 
 /**
   * _sqrt_helper - this
   * @n: param1
-  * @low: param2
-  * @high: param3
+  * @m: param2
   * Return: return 0
   */
-int _sqrt_helper(int n, int low, int high)
+int _sqrt(int n, int m)
 {
-	int mid = (low + high) / 2;
+	int m2 = m * m;
 
-	if (low > high)
-		return (-1);
-	else if (mid * mid == n)
-		return (mid);
-	else if (mid * mid > n)
-		return (_sqrt_helper(n, low, mid - 1));
-	else
-		return (_sqrt_helper(n, mid + 1, high));
+	if (m2 == n)
+		return (m);
+	else if (m2 < n)
+	{
+		if (m + 1 * m + 1 == n)
+			return (m + 1);
+		else if (m + 1 * m + 1 < n)
+			return (_sqrt(n, m + 1));
+	}
+	else if (m2 > n)
+	{
+		if ( m - 1 * m - 1 == n)
+			return (m - 1);
+		else if (m - 1 * m - 1 > n)
+			return (_sqrt(n, m - 1));
+	}
+	return (-1);
 }
