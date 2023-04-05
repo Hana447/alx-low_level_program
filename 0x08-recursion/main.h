@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 
+int palindrome(char *, int, int);
+int is_palindrome(char *s);
 int is_prime(int, int);
 int is_prime_number(int n);
 int  _sqrt_helper(int, int, int);
