@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+int is_prime(int, int);
 int is_prime_number(int n);
 int  _sqrt_helper(int, int, int);
 int _sqrt_recursion(int n);
