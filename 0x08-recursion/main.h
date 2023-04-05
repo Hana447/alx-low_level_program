@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 
+
+int wildcmp(char *s1, char *s2);
 int palindrome(char *, int, int);
 int is_palindrome(char *s);
 int is_prime(int, int);
