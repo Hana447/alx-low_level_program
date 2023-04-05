@@ -13,7 +13,7 @@ int is_palindrome(char *s)
 }
 
 /**
-  * palindrom -this function help
+  * palindrome -this function help
   * @s: param1
   * @end: param2
   * @start: param3
