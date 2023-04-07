@@ -18,13 +18,13 @@ int main(int argc, char *argv[])
 		{
 			count = 0;
 			printf("Error\n");
-			break;
+			return (1);
 		}
 		else if (isletter >= 'A' && isletter <= 'Z')
 		{
 			count = 0;
 			printf("Error\n");
-			break;
+			return (1);
 		}
 		else
 			count += atoi(argv[i]);
