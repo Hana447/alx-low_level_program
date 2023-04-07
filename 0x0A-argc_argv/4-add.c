@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
   * main - This is main function
   * @argc: parameter
@@ -14,13 +15,7 @@ int main(int argc, char *argv[])
 	for (i = 0; i < argc; i++)
 	{
 		isletter = *argv[i];
-		if (isletter >= 'a' && isletter <= 'z')
-		{
-			count = 0;
-			printf("Error\n");
-			return (1);
-		}
-		else if (isletter >= 'A' && isletter <= 'Z')
+		if (isalpha(isletter))
 		{
 			count = 0;
 			printf("Error\n");
@@ -31,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 	if (argc == 1)
 		printf("%d\n", 0);
-	if (count > 0)
+	else if (count > 0)
 		printf("%d\n", count);
 	return (0);
 }
