@@ -14,20 +14,22 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("0\n");
+		printf("%d\n", 0);
 		return (0);
 	}
-	for (i = 1; i < argc; i++)
+	else
 	{
-		if (isdigit(argv[i][0]))
-			count += atoi(argv[i]);
-		else
+		for (i = 1; i < argc; i++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][0]))
+				count += atoi(argv[i]);
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+		printf("%d\n", count);
+		return(0);
 	}
-
-	printf("%d\n", count);
-	return (0);
 }
