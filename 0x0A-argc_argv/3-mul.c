@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	else if (argc > 1)
 	{
 		for (i = 1; i < argc; i += 2)
-			if(argv[i + 1])
+			if (argv[i + 1])
 				count = atoi(argv[i]) * atoi(argv[i + 1]);
 			else
 				count = atoi(argv[i]);
