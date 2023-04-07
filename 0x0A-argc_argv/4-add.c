@@ -9,24 +9,31 @@
   */
 int main(int argc, char *argv[])
 {
-	int i, count = 0;
-	char isletter;
+	int i, j;
+	int  count = 0;
 
-	for (i = 0; i < argc; i++)
-	{
-		isletter = *argv[i];
-		if (isalpha(isletter))
-		{
-			count = 0;
-			printf("Error\n");
-			return (1);
-		}
-		else
-			count += atoi(argv[i]);
-	}
 	if (argc == 1)
+	{
 		printf("%d\n", 0);
-	else if (count > 0)
-		printf("%d\n", count);
+		return (1);
+	}
+	for (i = 1; i < argc; i++)
+	{
+		char *isletter = argv[i];
+
+		for (j = 0; isletter[j] != '\0'; j++)
+		{
+			if (isdigit(isletter[j]))
+				count += atoi(argv[i]);
+			else
+			{
+				count = 0;
+				printf("Error\n");
+				return (1);
+			}
+		}
+	}
+
+	printf("%d\n", count);
 	return (0);
 }
