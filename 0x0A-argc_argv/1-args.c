@@ -1,4 +1,4 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if(argv[i])
+		if (argv[i])
 			count += 1;
 	}
 	printf("%d\n", count);
