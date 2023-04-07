@@ -9,7 +9,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i;
 	int  count = 0;
 
 	if (argc == 1)
@@ -19,19 +19,15 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		char *isletter = argv[i];
-
-		for (j = 0; isletter[j] != '\0'; j++)
+		if (isdigit(argv[i][0]))
+			count += atoi(argv[i]);
+		else
 		{
-			if (isdigit(isletter[j]))
-				count += atoi(argv[i]);
-			else
-			{
-				count = 0;
-				printf("Error\n");
-				return (1);
-			}
+			count = 0;
+			printf("Error\n");
+			return (1);
 		}
+		
 	}
 
 	printf("%d\n", count);
