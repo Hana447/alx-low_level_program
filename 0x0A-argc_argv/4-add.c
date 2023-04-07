@@ -10,10 +10,11 @@ int main(int argc, char *argv[])
 {
 	int i, count = 0;
 	char isletter;
+
 	for (i = 0; i < argc; i++)
 	{
 		isletter = *argv[i];
-		if (isletter >= 'a' && isletter <= 'z') 
+		if (isletter >= 'a' && isletter <= 'z')
 		{
 			count = 0;
 			printf("Error\n");
