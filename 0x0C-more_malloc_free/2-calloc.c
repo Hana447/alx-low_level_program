@@ -8,12 +8,10 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *t;
-	unsigned int tsize;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	tsize = nmemb * size;
-	t = malloc(tsize);
+	t = malloc(nmemb * size);
 	if (t == NULL)
 		return (NULL);
 
