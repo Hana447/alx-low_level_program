@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+char **strtow(char *str);
+char **strtow(char *str);
 int _putchar(char c);
 char *argstostr(int ac, char **av);
 void free_grid(int **grid, int height);
