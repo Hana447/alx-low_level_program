@@ -3,7 +3,7 @@
 #include <stdarg.h>
 /**
   * print_numbers - this is function
-  * @separators: param
+  * @separator: param
   * @n: param2
   */
 void print_numbers(const char *separator, const unsigned int n, ...)
