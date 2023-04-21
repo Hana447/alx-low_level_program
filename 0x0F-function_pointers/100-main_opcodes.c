@@ -3,7 +3,7 @@
 /**
   * print_opcodes - This is function
   * @main_func: param
-  * @num_bytes
+  * @num_bytes: param2
   */
 void print_opcodes(char *main_func, int num_bytes)
 {
