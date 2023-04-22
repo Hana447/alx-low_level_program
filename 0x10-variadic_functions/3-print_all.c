@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
-  *
-  *
+  * print_all - function
+  * @format: param
   */
 void print_all(const char * const format, ...)
 {
@@ -41,16 +41,15 @@ void print_all(const char * const format, ...)
 			default:
 				continue;
 		}
-if (format[i])
-{
-while (format[i] != 'c' && 
-		format[i] != 'i' && format[i] != 'f' && 
-		format[i] != 's' && format[i])
-		i++;
-}
-		printf(", ");
+	if (format[i + 1] != '\0' && (format[i] == 'c' ||
+					format[i] == 'i' ||
+					format[i] == 'f' ||
+					format[i] == 's'))
+
+			printf(", ");
 	}
 
-va_end(list);
-printf("\n");
+	va_end(list);
+
+	printf("\n");
 }
