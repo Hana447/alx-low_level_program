@@ -1,26 +1,9 @@
-; Desc: 64-bit assembly program that prints
-;       Hello, Holberton followed by a new line.
-
-extern printf
-
-section .text
-   global main
-
+global    main
+          extern    printf
 main:
-   push rbp
-
-   call printf
-   mov rdi,fmt
-   mov rax,0
-   mov rsi,msg
-      
-   ret
-   mov rax, 0
-
-   pop rbp
-
-  
-section .data
-   fmt:db "%s", 10, 0
-   msg: db "Hello, Holberton", 0
-   
+          mov   edi, format
+          xor   eax, eax
+          call  printf
+          mov   eax, 0
+          ret
+format: db `Hello, Holberton\n`,0
