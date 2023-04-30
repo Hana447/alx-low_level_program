@@ -10,7 +10,7 @@ size_t print_listint(const listint_t *h)
 	size_t c;
 	const listint_t *current = h;
 	/*
-        *	while (current)
+	*while (current)
 	*{
 	*	printf("%d\n", current->n);
 	*	c++;
