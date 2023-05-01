@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-  * reverse_listint - Function that reverese 
+  * reverse_listint - Function that reverese
   * @head: param1
   * Return: head
   */
