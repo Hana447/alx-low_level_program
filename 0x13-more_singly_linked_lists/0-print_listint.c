@@ -7,7 +7,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t c = 0;
+	int c = 0;
 	const listint_t *current = h;
 
 	if (h == NULL)
@@ -15,8 +15,8 @@ size_t print_listint(const listint_t *h)
 	while (current != NULL)
 	{
 		printf("%d\n", current->n);
-		c++;
 		current = current->next;
+		c++;
 	}
 	return (c);
 }
